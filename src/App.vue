@@ -23,11 +23,12 @@
 </template>
 
 <script setup lang="ts">
+import parse from "./formulaTest";
+parse('2+5*8/(9+1)*9+8')
 import { ElMessage } from "element-plus";
 import parseFun from "./updateCmdFun";
-
 import { ref } from "vue";
-const input = ref("");
+const input = ref(`Z02[2,2]=Z02[2,1,'Z02[ZCWJMC]="001000" and R$(Z02[PC],2)="01"']`);
 const result = ref<object | string>("暂无结果");
 const errMsg = ref("暂无错误");
 interface ERRMSG {
