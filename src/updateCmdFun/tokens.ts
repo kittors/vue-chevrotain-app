@@ -1,4 +1,4 @@
-import { createToken } from 'chevrotain';
+import { createToken,Lexer } from 'chevrotain';
 
 const Number = createToken({ name: "Number", pattern: /\d+/ }); //整数
 const AlphaNumeric = createToken({ name: "AlphaNumeric", pattern: /(?=.*[A-Za-z])(?=.*[0-9])[A-Za-z0-9]+/ }); //大写或小写字母或数字任意组合 表名 标识名
@@ -26,6 +26,12 @@ const LessOrEqual  = createToken({ name: "LessOrEqual", pattern: /<=/ }) //比�
 const NotEqual  = createToken({ name: "NotEqual", pattern: /<>/ }) //比较符不等于
 const Equals = createToken({ name: "Equals", pattern: /=/ })//等号
 
+//跳过空格
+const WhiteSpace = createToken({
+    name: "WhiteSpace",
+    pattern: /\s+/,
+    group: Lexer.SKIPPED,
+});
 export {
     Number,
     AlphaNumeric,
@@ -47,5 +53,6 @@ export {
     Less,
     GreaterOrEqual,
     LessOrEqual,
-    NotEqual
+    NotEqual,
+    WhiteSpace
 }

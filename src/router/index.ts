@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory } from 'vue-router';
 
 import home from '../views/home.vue'
 import demo from '../views/demo.vue'
+import test from '../views/operations.vue'
 
 const router = createRouter({
     history: createWebHashHistory(),
@@ -15,6 +16,11 @@ const router = createRouter({
             path: '/demo',
             name: 'demo',
             component: demo
+        },
+        {
+            path: '/test',
+            name: 'test',
+            component: test
         },
     ]
 })

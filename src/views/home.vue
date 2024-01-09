@@ -23,8 +23,6 @@
 </template>
 
 <script setup lang="ts">
-import parse from "../formulaTest";
-parse("2+5*8/(9+1)*9+8");
 import { ElMessage } from "element-plus";
 import parseFun from "../updateCmdFun";
 import { ref } from "vue";
