@@ -58,9 +58,6 @@ const GreaterThan = createToken({ name: 'GreaterThan', pattern: />/ });//大于
 const LessThan = createToken({ name: 'LessThan', pattern: /</ });//小于
 
 
-//标识符
-const Identifier = createToken({ name: "Identifier", pattern: /\w+/ });
-
 //空格
 const WhiteSpace = createToken({
     name: "WhiteSpace",
@@ -69,6 +66,6 @@ const WhiteSpace = createToken({
 });
 
 // 将所有 Tokens 组合到一个数组中
-const allTokens = { Plus, Minus, Multiply, Divide, Number, LParen, RParen, LBracket, RBracket, Comma, SheetName, If, Then, Else, BBLX, INLIST, NotEqual, Equal, GreaterThanOrEqual, LessThanOrEqual, GreaterThan, LessThan, Identifier, WhiteSpace, AND, NOT, OR, DoubleQuote };
+const allTokens = { Plus, Minus, Multiply, Divide, Number, LParen, RParen, LBracket, RBracket, Comma, SheetName, If, Then, Else, BBLX, INLIST, NotEqual, Equal, GreaterThanOrEqual, LessThanOrEqual, GreaterThan, LessThan, WhiteSpace, AND, NOT, OR, DoubleQuote };
 
 export default allTokens
