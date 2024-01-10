@@ -1,4 +1,4 @@
-import { createToken,Lexer } from 'chevrotain';
+import { createToken, Lexer } from 'chevrotain';
 
 //运算符
 const Plus = createToken({ name: 'Plus', pattern: /\+/ });
@@ -9,9 +9,9 @@ const Divide = createToken({ name: 'Divide', pattern: /\// });
 //比较符
 const Greater = createToken({ name: "Greater", pattern: />[^=]/ }) //比较符大于
 const Less = createToken({ name: "Less", pattern: /<([^=]&[^>])/ }) //比较符小于
-const GreaterOrEqual  = createToken({ name: "GreaterOrEqual", pattern: />=/ }) //比较符大于等于
-const LessOrEqual  = createToken({ name: "LessOrEqual", pattern: /<=/ }) //比较符小于等于
-const NotEqual  = createToken({ name: "NotEqual", pattern: /<>/ }) //比较符不等于
+const GreaterOrEqual = createToken({ name: "GreaterOrEqual", pattern: />=/ }) //比较符大于等于
+const LessOrEqual = createToken({ name: "LessOrEqual", pattern: /<=/ }) //比较符小于等于
+const NotEqual = createToken({ name: "NotEqual", pattern: /<>/ }) //比较符不等于
 const Equals = createToken({ name: "Equals", pattern: /=/ })//等号
 
 //判断
@@ -22,11 +22,11 @@ const ELSE = createToken({ name: "ELSE", pattern: /else/i });
 const Number = createToken({ name: "Number", pattern: /\d+/ }); //数字
 
 const String = createToken({ name: "String", pattern: /"[^"]"/ }); //字符串
-const NumberTable = createToken({name: "NumberTable", pattern: /([A-Za-z_]+[0-9]*)+(\[)[0-9]+,[0-9]+(,'.*')?]/}) //编号表
-const LogoTable = createToken({name: "logoTable", pattern: /([A-Za-z_]+[0-9]*)+(\[)[A-Z]+(,'.*')?]/}) //标识表
-const TableName = createToken({name: "TableName", pattern: /([A-Za-z_]+[0-9]+)+/}) //表名
-const NumberTableCell = createToken({name: "NumberTableCell", pattern: /(\[)[0-9]+,[0-9]+(,'.*')?]/}) //编号单元格
-const LogoTableCell = createToken({name: "logoTableCell", pattern: /(\[)[A-Z]+(,'.*')?]/}) //标识符单元格
+const NumberTable = createToken({ name: "NumberTable", pattern: /([A-Za-z_]+[0-9]*)+(\[)[0-9]+,[0-9]+(,'.*')?]/ }) //表名+单元格编号z02[1,2,'*'] || z02[1,2]
+const LogoTable = createToken({ name: "logoTable", pattern: /([A-Za-z_]+[0-9]*)+(\[)[A-Z]+(,'.*')?]/ }) //表名+单元格标识 z02[PC]  || z02[PC,'*']
+const TableName = createToken({ name: "TableName", pattern: /([A-Za-z_]+[0-9]+)+/ }) //表名 z02 zc02
+const NumberTableCell = createToken({ name: "NumberTableCell", pattern: /(\[)[0-9]+,[0-9]+(,'.*')?]/ }) //单元格编号 [2,2]
+const LogoTableCell = createToken({ name: "logoTableCell", pattern: /(\[)[A-Z]+(,'.*')?]/ }) //单元格标识 [PC]
 
 const LeftBracket = createToken({ name: "LeftBracket", pattern: /\[/ });//左中括号
 const Comma = createToken({ name: "Comma", pattern: /,/ });//逗号
