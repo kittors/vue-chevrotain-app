@@ -11,7 +11,6 @@ interface ErrorMessages {
 
 const allTokens = [Number, AlphaNumeric, LeftBracket, Comma, RightBracket];
 
-
 // 创建 Lexer
 const lexer = new Lexer(allTokens);
 
