@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory } from 'vue-router';
 
 import home from '../views/home.vue'
 import demo from '../views/demo.vue'
+import funParse from '../views/funParse.vue'
 
 const router = createRouter({
     history: createWebHashHistory(),
@@ -16,6 +17,11 @@ const router = createRouter({
             name: 'demo',
             component: demo
         },
+        {
+            path: '/funParse',
+            name: 'funParse',
+            component: funParse
+        }
     ]
 })
 
