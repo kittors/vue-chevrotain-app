@@ -4,7 +4,7 @@
 
 <script setup lang="ts">
 import parse from "../formulaParse/core";
-const str = `z02[2,1]`;
+const str = `z02[2,3]`;
 try {
   const cst = parse(str);
   console.log(cst);
