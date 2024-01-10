@@ -20,6 +20,7 @@ const THEN = createToken({ name: "THEN", pattern: /then/i });
 const ELSE = createToken({ name: "ELSE", pattern: /else/i });
 
 const Number = createToken({ name: "Number", pattern: /\d+/ }); //数字
+
 const String = createToken({ name: "String", pattern: /"[^"]"/ }); //字符串
 const NumberTable = createToken({name: "NumberTable", pattern: /([A-Za-z_]+[0-9]*)+(\[)[0-9]+,[0-9]+(,'.*')?]/}) //编号表
 const LogoTable = createToken({name: "logoTable", pattern: /([A-Za-z_]+[0-9]*)+(\[)[A-Z]+(,'.*')?]/}) //标识表
