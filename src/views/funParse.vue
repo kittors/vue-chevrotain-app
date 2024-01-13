@@ -4,7 +4,7 @@
 
 <script setup lang="ts">
 import parse from "../formulaParse/core";
-const str = `IF asdasd THEN asdasd`;
+const str = `z02[2,3]`;
 try {
   const cst = parse(str);
   console.log(cst);
